@@ -2,6 +2,9 @@
  * @author 重新做人idea基础学习
  * @date 2022-2-27
  */
+
+
+//关键理解next数组和记忆！！！
 public class Kmp {
     public static void main(String[] args) {
         String s = "abbabbbbcab";
