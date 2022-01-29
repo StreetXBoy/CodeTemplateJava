@@ -5,6 +5,7 @@
 
 
 ///本质是就是多叉树！！！
+//也叫前缀树！！！
 public class dict_Tree {
     public static void main(String[] args) {
 
@@ -91,6 +92,7 @@ public class dict_Tree {
          */
         public int countPrefix(String str) {
             Node pNode = this.root;
+            //这个是按照str的路径走的!!
             for (int i = 0; i < str.length(); i++) {
                 int index = str.charAt(i) - 'a';
                 if (pNode.child[index] == null) {

@@ -5,6 +5,8 @@
 //https://www.cnblogs.com/skywang12345/p/3624343.html
 
     //https://www.sohu.com/a/291155117_355142
+
+//理解原理 插入情况可能负责量力而行！！！
 public class ReadBlackTree {
     public static void main(String[] args) {
 
@@ -211,6 +213,8 @@ public class ReadBlackTree {
             return null;
         }
 
+        //二叉搜索树的前驱和后继的写法！！！
+
         /*
          * 找结点(x)的后继结点。即，查找"红黑树中数据值大于该结点"的"最小结点"。
          */
@@ -218,10 +222,16 @@ public class ReadBlackTree {
             // 如果x存在右孩子，则"x的后继结点"为 "以其右孩子为根的子树的最小结点"。
             if (x.right != null)
                 return minimum(x.right);
-
+            //              pa
+            //            /
+//               p       p
+//             /          \
+//             x           x
+//            /            /
+//            lx          lx
             // 如果x没有右孩子。则x有以下两种可能：
             // (01) x是"一个左孩子"，则"x的后继结点"为 "它的父结点"。
-            // (02) x是"一个右孩子"，则查找"x的最低的父结点，并且该父结点要具有左孩子"，找到的这个"最低的父结点"就是"x的后继结点"。
+            // (02) x是"一个右孩子"，则查找"x的最低的父结点，并且该父结点要具有左孩子"，找到的这个"最低的父结点"就是"x的后继结点"。pa
             RBTNode<T> y = x.parent;
             while ((y!=null) && (x==y.right)) {
                 x = y;
@@ -238,8 +248,15 @@ public class ReadBlackTree {
             // 如果x存在左孩子，则"x的前驱结点"为 "以其左孩子为根的子树的最大结点"。
             if (x.left != null)
                 return maximum(x.left);
-
+       //               x
+        //          /
+        //      lx
             // 如果x没有左孩子。则x有以下两种可能：
+ //                                  pp
+//                                     \
+//                      p               p
+//                        \             /
+//                         x           x
             // (01) x是"一个右孩子"，则"x的前驱结点"为 "它的父结点"。
             // (01) x是"一个左孩子"，则查找"x的最低的父结点，并且该父结点要具有右孩子"，找到的这个"最低的父结点"就是"x的前驱结点"。
             RBTNode<T> y = x.parent;
