@@ -1,6 +1,7 @@
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author 重新做人idea基础学习
@@ -8,6 +9,7 @@ import java.util.List;
  */
 public class test {
     public static void main(String[] args) {
+        AtomicInteger ato = new AtomicInteger();
         System.out.println(Solution.partition("aab"));
 
     }
@@ -21,7 +23,7 @@ public class test {
             return res;
         }
 
-        public static void dfs(String s, int index, int length, List<String> temp){
+        public static synchronized void dfs(String s, int index, int length, List<String> temp){
             if(index==length){
                 res.add(new ArrayList<>(temp));
                 return;

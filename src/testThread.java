@@ -11,10 +11,11 @@ public class testThread {
             @Override
             public void run() {
                 for(int i=0;i< 20 ;i++){
+                    //说白了就是一先一后！！！//改正错误
                     synchronized (object){
+                        System.out.println(a[i%2]);
                         try {
                             object.wait();
-                            System.out.println(a[i%2]);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
@@ -29,9 +30,9 @@ public class testThread {
             public void run() {
                 for(int i=0;i<20;i++){
                     synchronized (object){
+                        System.out.println(a[i%3]);
                         object.notify();
                         try {
-                            System.out.println(a[i%3]);
                             object.wait();
                         } catch (InterruptedException e) {
                             e.printStackTrace();
