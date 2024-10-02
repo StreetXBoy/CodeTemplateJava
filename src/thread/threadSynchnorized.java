@@ -1,3 +1,5 @@
+package thread;
+
 public class threadSynchnorized {
 
     private int count = 1;

@@ -1,3 +1,5 @@
+package thread;
+
 import java.lang.reflect.AnnotatedArrayType;
 
 public class ThreadLocalTest {

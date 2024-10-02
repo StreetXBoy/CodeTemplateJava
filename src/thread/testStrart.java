@@ -1,3 +1,5 @@
+package thread;
+
 /**
  * @author 重新做人idea基础学习
  * @date 2024-6-20

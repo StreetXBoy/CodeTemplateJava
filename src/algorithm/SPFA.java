@@ -1,3 +1,5 @@
+package algorithm;
+
 import java.util.LinkedList;
 import java.util.Queue;
 //刷题时直接.util.*就完事！！！

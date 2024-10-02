@@ -1,3 +1,5 @@
+package thread;
+
 import java.text.RuleBasedCollator;
 
 public class Demo2 {

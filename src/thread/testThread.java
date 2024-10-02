@@ -1,3 +1,5 @@
+package thread;
+
 public class testThread {
     //感谢你让我成长！！！！
 
