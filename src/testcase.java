@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.zip.CheckedOutputStream;
 
 /**
  * @author 重新做人idea基础学习
@@ -16,6 +15,7 @@ public class testcase {
             list.add(new Frac(X[i],Y[i]));
         }
         Collections.sort(list,(a,b)->a.x*b.y-a.y*b.x);
+        Integer []nums =new Integer[]{1,2,3};
         System.out.println(list);
         int size = list.size();
         int count =0;

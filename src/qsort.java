@@ -44,6 +44,7 @@ public class qsort {
         int key = num[start];
         int i = start;
         int j = end;
+        //本质是交换
         while (i<j){
             while (i<j&&num[j]>=key) j--;
             num[i]=num[j];
@@ -57,9 +58,19 @@ public class qsort {
 
     public  static void sort(int []num,int start,int end){
         if(start<end){
-            int key =  partition(num,start,end);
-            sort(num,start,key-1);
-            sort(num,key+1,end);
+            int key = num[start];
+            int i = start;
+            int j = end;
+            //本质是交换
+            while (i<j){
+                while (i<j&&num[j]>=key) j--;
+                num[i]=num[j];
+                while (i<j&&num[i]<=key) i++;
+                num[j]=num[i];
+            }
+            num[i]=key;
+            sort(num,start,i-1);
+            sort(num,i+1,end);
         }
     }
 

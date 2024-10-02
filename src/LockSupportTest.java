@@ -11,6 +11,9 @@ public class LockSupportTest {
     }
 //LockSupport提供两类静态函数分别是park和unpark，即阻塞与唤醒线程
     // 比sychornized 和 wait notify 更简单的!!!
+    // https://cloud.tencent.com/developer/article/1778878 原理 unsafe
+    //park 阻碍当前 unpark释放
+    // AQS https://tech.meituan.com/2019/12/05/aqs-theory-and-apply.html
     public  static  void  lockSupport(){
         char [] dataOne = "123456".toCharArray();
         char [] dataTwo = "ABCDEF".toCharArray();
